@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --gray: #a1a09b;
+  --orange: #ff7c00;
+  --light-gray: #dddfd9;
+  --pink: #ff0477;
+  --text-color: #000;
+  --background: #dddfd9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  background-color: var(--orange);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--pink);
+}
+
+.destinations {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* muda para começar no topo */
+  padding-top: 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.destinations h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--pink);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: calc(3 * 250px + 2 * 2rem); /* 3 cards + 2 gaps */
+  margin: 0 auto; /* centraliza */
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay padrão (também usado nos blocos de loading agora) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3); /* visível sempre */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+/* Título ou loading text */
+.overlay h3,
+.overlay span {
+  color: #fff;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Hover: escurece e texto diminui */
+.card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .overlay h3,
+.card:hover .overlay span {
+  transform: scale(0.95);
+}
+
+/* Remove regras separadas de loading-card que causavam conflito */
+.loading-card img {
+  display: none;
+}
+
+/* Removendo texto extra embaixo dos loading cards */
+.card-wrapper:nth-last-child(-n+2) .card-text {
+  display: none;
+}
+
+/* Remove hover do loading cards */
+.loading-card:hover {
+  background-color: var(--gray);
+  cursor: default;
+}
+
+.about-point {
+  max-width: 600px; /* mesma largura do texto da esquerda */
+  align-self: flex-start; /* começa alinhado à esquerda */
+  margin-top: 2rem;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.about-point h2 {
+  font-size: 1.6rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.about-point p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.footer {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--orange);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.footer p {
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.footer:hover p {
+  color: var(--pink);
+}

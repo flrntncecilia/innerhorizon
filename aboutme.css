@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --gray: #a1a09b;
+  --orange: #ff7c00;
+  --light-gray: #dddfd9;
+  --pink: #ff0477;
+  --text-color: #000;
+  --background: #dddfd9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+.header {
+  width: 100%;
+  background-color: var(--orange);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+}
+
+.menu a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--pink);
+}
+
+.about {
+  flex: 1;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: right;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 0.6rem;
+}
+
+.about-photo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* BLOCO ESTILO BETWEEN THE STREETS */
+.about-extra {
+  max-width: calc(500px + 600px + 2rem);
+  margin: 2rem auto 0 auto;
+  padding: 0 2rem;
+  direction: rtl;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.about-point {
+  max-width: calc(500px + 600px + 2rem); /* mesma largura da imagem + texto */
+  margin-top: 2rem;
+  padding: 0 2rem;
+  text-align: justify;
+  align-self: flex-start;
+}
+
+.about-point h2 {
+  font-size: 2rem; /* mesmo tamanho de 'Get to know me a bit' */
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.about-point p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.about-bar {
+  background-color: var(--gray); /* mesma cor do botão "Check here" */
+  color: white;
+  height: 3.5rem;
+  margin: 2rem auto;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 0 1rem;
+
+  /* Largura idêntica à soma das colunas do texto e imagem */
+  max-width: 1130px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap; /* Garante que se reduzir a tela, elas quebrem para baixo */
+}
+
+.logo-row img {
+  max-height: 90px; /* Você pode ajustar esse valor conforme o tamanho desejado */
+  object-fit: contain;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: var(--orange);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.footer:hover p {
+  color: var(--pink);
+}
