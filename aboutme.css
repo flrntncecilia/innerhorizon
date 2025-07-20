@@ -44,7 +44,7 @@ body {
 .menu a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: #fff;
+  color: #dddfd9;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -127,7 +127,7 @@ body {
 
 .about-bar {
   background-color: var(--gray); /* mesma cor do botão "Check here" */
-  color: white;
+  color: #dddfd9;
   height: 3.5rem;
   margin: 2rem auto;
   border-radius: 5%;
@@ -136,8 +136,6 @@ body {
   justify-content: center;
   font-weight: bold;
   padding: 0 1rem;
-
-  /* Largura idêntica à soma das colunas do texto e imagem */
   max-width: 1130px;
   width: 100%;
   box-sizing: border-box;
@@ -162,7 +160,7 @@ body {
 .footer {
   width: 100%;
   background-color: var(--orange);
-  color: #fff;
+  color: #dddfd9;
   text-align: center;
   padding: 1rem 0;
   margin-top: auto;
@@ -175,4 +173,186 @@ body {
 
 .footer:hover p {
   color: var(--pink);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .about {
+    padding: 0 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 100%;
+  }
+
+  .about-extra {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .about-point {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .about-bar {
+    max-width: 100%;
+    padding: 0 0.8rem;
+    height: 3rem;
+  }
+
+  .logo-row {
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .logo-row img {
+    max-height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .menu {
+    margin-top: 1rem;
+  }
+
+  .menu a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .about {
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-extra {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .about-point h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-point p {
+    font-size: 0.95rem;
+  }
+
+  .about-bar {
+    height: 2.8rem;
+    font-size: 0.95rem;
+  }
+
+  .logo-row {
+    gap: 1.5rem;
+  }
+
+  .logo-row img {
+    max-height: 70px;
+  }
+
+  .footer {
+    padding: 0.8rem 0;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .menu a {
+    margin-left: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .about {
+    padding: 0 0.8rem;
+    margin: 1rem auto;
+  }
+
+  .about-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-extra {
+    padding: 0 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .about-point {
+    padding: 0 0.8rem;
+  }
+
+  .about-point h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-point p {
+    font-size: 0.9rem;
+  }
+
+  .about-bar {
+    height: 2.5rem;
+    font-size: 0.9rem;
+    padding: 0 0.6rem;
+  }
+
+  .logo-row {
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .logo-row img {
+    max-height: 60px;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
 }
