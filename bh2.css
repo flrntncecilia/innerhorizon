@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-/* Reset e básico */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -31,7 +29,7 @@ body {
 .menu a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: #fff;
+  color: #dddfd9;
   font-weight: 600;
   text-transform: capitalize;
   transition: color 0.3s;
@@ -69,7 +67,7 @@ body {
   bottom: 8px;
   width: 100%;
   text-align: center;
-  color: white;
+  color: #dddfd9;
   font-size: 0.8rem;
   font-weight: 600;
   text-shadow: 0 0 5px rgba(0,0,0,0.7);
@@ -87,25 +85,25 @@ body {
 
 .pink-bar {
   background-color: #ff0477;
-  color: white;
+  color: #dddfd9;
   font-weight: 700;
   font-size: 1.5rem;
   padding: 0.8rem 1.5rem;
   border-radius: 8px 0 0 0;
-  top: 60px;
+  top: 70px;
   margin-left: 1.5rem;
   width: calc(100vw - ((100% - 1200px) / 2 + 400px + 1.5rem));
   box-sizing: border-box;
   z-index: 900;
   white-space: nowrap;
-  height: 86px;
+  height: 63px;
 }
 
 .gray-box {
   background-color: #a1a09b;
   border-radius: 0 0 8px 8px;
   padding: 1.5rem;
-  color: black;
+  color: #dddfd9;
   font-size: 1rem;
   flex-grow: 1;
   min-height: 300px;
@@ -176,7 +174,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  color: white;
+  color: #dddfd9;
   padding: 6px 8px;
   text-align: center;
   font-size: 0.9rem;
@@ -191,7 +189,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   background-color: #888;
-  color: white;
+  color: #dddfd9;
   border: none;
   font-size: 1rem;
   padding: 0.4rem 0.6rem;
@@ -214,7 +212,7 @@ body {
   position: relative;   
   left: 0;
   background-color: #ff7c00;
-  color: #fff;
+  color: #dddfd9;
   text-align: center;
   padding: 1rem 0;
   box-sizing: border-box;
