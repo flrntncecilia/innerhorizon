@@ -43,7 +43,7 @@ body {
 .menu a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: #fff;
+  color: #dddfd9;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -57,7 +57,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* muda para começar no topo */
+  justify-content: flex-start;
   padding-top: 40px;
   text-align: center;
   max-width: 1200px;
@@ -75,8 +75,9 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  max-width: calc(3 * 250px + 2 * 2rem); /* 3 cards + 2 gaps */
-  margin: 0 auto; /* centraliza */
+  max-width: calc(3 * 250px + 2 * 2rem);
+  margin: 0 auto; 
+  padding:3rem 5rem;
 }
 
 .card-wrapper {
@@ -92,7 +93,7 @@ body {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #ccc;
+  background-color: #a1a09b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +106,6 @@ body {
   display: block;
 }
 
-/* Overlay padrão (também usado nos blocos de loading agora) */
 .overlay {
   position: absolute;
   top: 0;
@@ -113,7 +113,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.3); /* visível sempre */
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,17 +121,15 @@ body {
   z-index: 1;
 }
 
-/* Título ou loading text */
 .overlay h3,
 .overlay span {
-  color: #fff;
+  color: #dddfd9;
   font-size: 1rem;
   transition: transform 0.3s ease;
   text-align: center;
   z-index: 2;
 }
 
-/* Hover: escurece e texto diminui */
 .card:hover .overlay {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -141,25 +139,22 @@ body {
   transform: scale(0.95);
 }
 
-/* Remove regras separadas de loading-card que causavam conflito */
 .loading-card img {
   display: none;
 }
 
-/* Removendo texto extra embaixo dos loading cards */
 .card-wrapper:nth-last-child(-n+2) .card-text {
   display: none;
 }
 
-/* Remove hover do loading cards */
 .loading-card:hover {
   background-color: var(--gray);
   cursor: default;
 }
 
 .about-point {
-  max-width: 600px; /* mesma largura do texto da esquerda */
-  align-self: flex-start; /* começa alinhado à esquerda */
+  max-width: 600px; 
+  align-self: flex-start; 
   margin-top: 2rem;
   padding: 0 2rem;
   text-align: left;
@@ -182,7 +177,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--orange);
-  color: #fff;
+  color: #dddfd9;
   text-align: center;
   padding: 1rem 0;
   margin-top: auto;
@@ -196,4 +191,154 @@ body {
 
 .footer:hover p {
   color: var(--pink);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .destinations {
+    max-width: 90%;
+    padding-top: 30px;
+  }
+
+  .cards {
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+
+  .card-wrapper {
+    width: 220px;
+  }
+
+  .card {
+    width: 220px;
+    height: 220px;
+  }
+
+  .destinations h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-point {
+    max-width: 80%;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 35px;
+    margin-bottom: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu a {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .destinations {
+    max-width: 95%;
+    padding-top: 20px;
+  }
+
+  .destinations h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .about-point {
+    max-width: 90%;
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-point h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-point p {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .menu a {
+    font-size: 0.85rem;
+    margin: 0.4rem 0;
+  }
+
+  .destinations h1 {
+    font-size: 1.3rem;
+  }
+
+  .card-wrapper {
+    max-width: 90%;
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .overlay h3,
+  .overlay span {
+    font-size: 0.9rem;
+  }
+
+  .about-point h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-point p {
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 0.6rem 0;
+  }
 }
