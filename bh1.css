@@ -78,10 +78,9 @@ body {
 .right-side {
   display: flex;
   flex-direction: column;
-  position: relative;
   flex-grow: 1;
   justify-content: flex-start;
-  margin-top: auto;
+  margin-left: 0;
 }
 
 .pink-bar {
@@ -90,12 +89,8 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   padding: 0.8rem 1.5rem;
-  top: 70px;
-  margin-left: 1.5rem;
-  width: calc(100vw - ((100% - 1200px) / 2 + 400px + 1.5rem));
+  width: 100%;
   box-sizing: border-box;
-  z-index: 900;
-  white-space: nowrap;
   height: 63px;
 }
 
@@ -106,7 +101,11 @@ body {
   font-size: 0.9rem;
   margin-top: 0.5rem;
   box-sizing: border-box;
-  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(400px - 63px - 0.5rem);
+  line-height: 1.1;
 }
 
 .below-text {
@@ -149,7 +148,6 @@ body {
   line-height: 1.5;
 }
 
-/* Carrossel atualizado */
 .carousel-container {
   flex: 1;
   position: relative;
@@ -203,9 +201,10 @@ body {
 
 .extra-text {
   max-width: 1200px;
-  margin: 0.5rem auto 6rem auto;
+  margin: 2rem auto 4rem auto;
   color: #000;
   box-sizing: border-box;
+  padding: 0 2rem;
 }
 
 .footer {
@@ -229,7 +228,6 @@ body {
   color: #ff0477;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .main-container {
     flex-direction: column;
@@ -255,6 +253,7 @@ body {
   .gray-box {
     margin-left: 0;
     font-size: 0.85rem;
+    min-height: auto;
   }
 
   .text-and-carousel {
@@ -269,6 +268,11 @@ body {
 
   .text-block {
     min-width: 100%;
+  }
+
+  .extra-text {
+    margin: 2rem auto 1.5rem auto;
+    padding: 0 1.5rem;
   }
 }
 
@@ -309,6 +313,7 @@ body {
   .gray-box {
     font-size: 0.8rem;
     padding: 0.1rem 0.8rem;
+    min-height: auto;
   }
 
   .below-text {
@@ -338,6 +343,7 @@ body {
   .extra-text {
     padding: 0 1rem;
     font-size: 0.95rem;
+    margin: 2rem auto 1rem auto;
   }
 
   .footer {
@@ -375,6 +381,7 @@ body {
 
   .gray-box {
     font-size: 0.75rem;
+    min-height: auto;
   }
 
   .below-text {
@@ -409,7 +416,8 @@ body {
 
   .extra-text {
     font-size: 0.9rem;
-    margin: 0.5rem auto 4rem auto;
+    margin: 1.5rem auto 1rem auto;
+    padding: 0 0.8rem;
   }
 
   .footer p {
