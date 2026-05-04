@@ -193,9 +193,6 @@ body {
   color: var(--pink);
 }
 
-/* Media Queries for Responsiveness */
-
-/* Tablets and smaller desktops (max-width: 1024px) */
 @media (max-width: 1024px) {
   .destinations {
     max-width: 90%;
@@ -226,7 +223,6 @@ body {
   }
 }
 
-/* Mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -297,7 +293,6 @@ body {
   }
 }
 
-/* Small mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
   .header {
     padding: 0.8rem;
