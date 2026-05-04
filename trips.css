@@ -147,11 +147,6 @@ body {
   display: none;
 }
 
-.loading-card:hover {
-  background-color: var(--gray);
-  cursor: default;
-}
-
 .about-point {
   max-width: 600px; 
   align-self: flex-start; 
